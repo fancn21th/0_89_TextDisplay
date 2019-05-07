@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HOME | Text Display</title>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <h1>Text Display</h1>
+      <p>a wysiwyg style</p>
+    </div>
+    <!-- row -->
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>普通文本域</h2>
+          <textarea
+            name="ta1"
+            id="ta1"
+            cols="35"
+            target="ta1Display"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>普通文本域 - 显示</h2>
+          <p id="ta1Display"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
