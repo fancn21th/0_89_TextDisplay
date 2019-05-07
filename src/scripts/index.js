@@ -4,9 +4,8 @@ const showTa = function() {
   target.innerHTML = this.value;
 };
 
-const ready = function() {
+$(document).ready(function() {
   const ta1 = document.getElementById("ta1");
   ta1.addEventListener("change", showTa);
-};
-
-document.addEventListener("DOMContentLoaded", ready);
+  $("#rte1").summernote();
+});
