@@ -19,11 +19,13 @@ $(document).ready(function() {
         target.innerHTML = contents;
       },
       onPaste: function(e) {
-        console.log(
-          (
-            (e.originalEvent || e).clipboardData || window.clipboardData
-          ).getData("Text")
-        );
+        var bufferText = (
+          (e.originalEvent || e).clipboardData || window.clipboardData
+        ).getData("Text");
+
+        e.preventDefault();
+
+        document.execCommand("insertText", false, bufferText);
       }
     }
   });
