@@ -9,11 +9,13 @@ $(document).ready(function() {
   ta1.addEventListener("change", showTa);
   $("#rte1").on("summernote.change", function(we, contents, $editable) {
     const pattern = "&nbsp;";
-    if (contents.includes(pattern)) {
+    const reg = new RegExp(pattern, "g");
+    if (reg.test(contents)) {
       we.preventDefault();
       setTimeout(function() {
-        const reg = new RegExp("&nbsp;", "g");
+        console.log("pre:", contents);
         const newText = contents.replace(reg, " ");
+        console.log("post:", newText);
         $("#rte1").summernote("reset");
         $("#rte1").summernote("pasteHTML", newText);
       }, 100);
