@@ -1,3 +1,9 @@
 #ta1Display {
   white-space: pre-wrap;
 }
+
+#rte1Display {
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
