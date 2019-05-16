@@ -13,11 +13,14 @@ $(document).ready(function() {
       we.preventDefault();
       setTimeout(function() {
         const reg = new RegExp("&nbsp;", "g");
-        const newText = contents.replace(reg, "");
+        const newText = contents.replace(reg, " ");
         $("#rte1").summernote("reset");
         $("#rte1").summernote("pasteHTML", newText);
       }, 100);
     }
+    const targetId = this.getAttribute("target");
+    const target = document.getElementById(targetId);
+    target.innerHTML = contents;
   });
 
   $("#rte1").summernote({
