@@ -17,7 +17,7 @@ $(document).ready(function() {
         const newText = contents.replace(reg, " ");
         console.log("post:", newText);
         $("#rte1").summernote("reset");
-        $("#rte1").summernote("pasteHTML", newText);
+        $("#rte1").summernote("code", newText);
       }, 100);
     }
     const targetId = this.getAttribute("target");
